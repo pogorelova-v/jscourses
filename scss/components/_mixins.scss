@@ -1,0 +1,12 @@
+@mixin break($point) {
+    @media(min-width: $point) {
+        @content;
+    }
+}
+
+@mixin desktop {
+  @media (min-width: 768px ) {
+    @content;
+  }
+} 
+ 

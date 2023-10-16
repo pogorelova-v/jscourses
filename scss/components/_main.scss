@@ -1,0 +1,52 @@
+:root{
+    font-family: "Onest", sans-serif;
+    font-weight: 400;  
+    box-sizing: border-box; 
+    font-size:  3.125vw;  
+}
+
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable; 
+}
+
+body { 
+  font-size: 14px;
+  line-height: 20px;  
+  color: $font; 
+  background-color: $bg-main;
+  scrollbar-gutter: stable; 
+  overflow-x: hidden;   
+
+  &.not-scroll{
+    overflow: hidden;  
+  }
+}
+
+.container{
+  width: 28rem;
+  margin: 0 auto; 
+
+  @include desktop{
+    width: 738px;
+  }
+} 
+
+.btn-blue{
+    padding: 10px 20px;
+    background-color: $main-blue;
+    color: $white;
+    border-radius: 100px; 
+    font-weight: 500;
+
+    &:hover{
+      background-color: $blue-hover;
+    }
+}
+ 
