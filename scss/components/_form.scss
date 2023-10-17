@@ -16,6 +16,14 @@ form{
         display: flex;
         flex-direction: column;
         gap: 13px;
+
+        @include desktop{
+            flex-direction: row;
+
+            .elem{
+                flex: 1 1 0;
+            }
+        }
     }
 
     .elem{ 
@@ -64,6 +72,10 @@ form{
 
         textarea{
             height: 200px;  
+
+            @include desktop{
+                height: 146px;
+            }
         } 
 
         &.select{
@@ -72,7 +84,7 @@ form{
             .title{
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
+                align-items: center; 
                 height: 50px; 
                 width: 100%;  
                 box-sizing: border-box;
@@ -93,6 +105,14 @@ form{
 
                 span{
                     pointer-events: none;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap; 
+
+                    @include desktop{
+                        width: 190px;
+                    }
                 }
 
                 &:hover{
@@ -172,6 +192,13 @@ form{
         
         button{
             width: 100%; 
+        }
+
+        @include desktop{ 
+            button{
+                width: fit-content; 
+                min-width: 133px;
+            }
         }
     }
 }

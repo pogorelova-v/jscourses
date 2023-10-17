@@ -3,9 +3,16 @@
     &_footnote{  
         padding-right: 25px;
         margin-bottom: 21px;
+
+        @include desktop{
+          padding: 0;
+          margin-bottom: 0;
+          margin-top: 15px;
+        }
     }
 
     &_picture{
+        position: relative;
         overflow-x: auto;
         padding: 0 2rem 10px 2rem;
 
@@ -26,6 +33,58 @@
         &::-webkit-scrollbar-track { 
           margin: 2rem;
           background: $bg-grey;
+        }
+        
+        .date{
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 16px;
+          right: 16px; 
+          height: 100px;
+          width: 112px;
+          border-radius: 18px;
+          background-color: rgba(255, 255, 255, 0.9);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 25px;
+          transition: 0.3s;
+          
+          .num{  
+            position: relative;
+            font-size: 24px; 
+ 
+            &::after{
+              position: absolute;
+              content: '';
+              top: 0;
+              right: -15px;
+              height: 25px;
+              width: 5px;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='5' height='7' viewBox='0 0 5 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5 3.5L0 7V0L5 3.5Z' fill='%23202326'/%3e%3c/svg%3e ");
+            }
+          }
+
+          &:hover{
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0 0 10px $white;
+          }
+        }
+
+        @include desktop{
+          width: 738px;
+          height: fit-content;
+          margin: 0 auto;
+          padding: 0;
+
+          .date{
+            display: flex;
+          }
         }
     }
 }

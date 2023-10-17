@@ -10,6 +10,12 @@ $(document).ready(function () {
           el: '[data-similar-posts-swiper] .swiper-pagination', 
         }, 
 
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          }, 
+        },
     }); 
 
   });

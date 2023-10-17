@@ -18,6 +18,7 @@ $(document).ready(function () {
     //Смена цвета звёзд по клику и подсчёт
     $(document).on('click', '[data-rating-stars] svg', function(){    
         $(this).parents('[data-rating-stars]').find('svg').removeClass('active');
+        $(this).parents('[data-rating-stars]').find('svg').css('color','');
         for (let i = 0; i <= $(this).index(); i++) { 
             $(this).parents('[data-rating-stars]').find('svg').eq(i).addClass('active'); 
         }  

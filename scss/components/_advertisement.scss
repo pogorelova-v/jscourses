@@ -1,4 +1,6 @@
 .advertisement{
+    width: fit-content;
+    margin: 0 auto;
     padding: 20px 0 44px 0; 
 
     img{
@@ -10,5 +12,13 @@
         margin-top: 12px;
         font-size: 12px;
         line-height: 18px;
+    }
+
+    @include desktop{
+        padding: 60px 0 70px 0; 
+
+        &_footnote{
+            margin-top: 10px; 
+        }
     }
 }

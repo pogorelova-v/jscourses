@@ -102,6 +102,7 @@ $(document).ready(function () {
     //Смена цвета звёзд по клику и подсчёт
     $(document).on('click', '[data-rating-stars] svg', function(){    
         $(this).parents('[data-rating-stars]').find('svg').removeClass('active');
+        $(this).parents('[data-rating-stars]').find('svg').css('color','');
         for (let i = 0; i <= $(this).index(); i++) { 
             $(this).parents('[data-rating-stars]').find('svg').eq(i).addClass('active'); 
         }  
@@ -127,6 +128,20 @@ $(document).ready(function () {
           el: '[data-similar-posts-swiper] .swiper-pagination', 
         }, 
 
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          }, 
+        },
     }); 
 
   });
+$(document).ready(function () {
+    
+    if ($(window).width() >= 768 && $('[data-way-block] .way_picture').length) { 
+        $('[data-way-block] .way_picture').after( $('[data-way-block] .way_footnote') )
+        $('[data-way-block] .way_footnote').wrap('<div class="container"></div>');
+    }
+
+});

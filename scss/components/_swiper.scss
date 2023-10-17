@@ -51,4 +51,16 @@
             background-color: $main-blue; transform: scale(1.5);
         }
     }
+
+    @include desktop{
+        .swiper-slide{
+
+            .picture{ 
+                height: 228px; 
+            } 
+            .title{ 
+                width: 188px;
+            }
+        }
+    }
 }
