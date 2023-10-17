@@ -1,11 +1,19 @@
-.header{
+header{ 
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    z-index: $z-sticky-header;
+    background-color: $bg-main;
+} 
+
+.header{ 
     padding: 18px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
 
     @include desktop{ 
-        gap: 100px;
+        gap: 101px;
     }
 
     &_logo{ 
@@ -14,7 +22,7 @@
             display: flex;
             align-items: center;
             width: 104px;
-            height: 12.9px;
+            height: 14px;
             color: $main-blue;
 
             svg{
@@ -84,7 +92,7 @@
 
             @include desktop{
                 flex-direction: row; 
-                gap: 35px;
+                gap: 37px;
             }
         }
 

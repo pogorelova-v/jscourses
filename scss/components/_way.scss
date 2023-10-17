@@ -1,0 +1,31 @@
+.way{ 
+  
+    &_footnote{  
+        padding-right: 25px;
+        margin-bottom: 21px;
+    }
+
+    &_picture{
+        overflow-x: auto;
+        padding: 0 2rem 10px 2rem;
+
+        img{
+            width: 738px;
+            height: 330px;
+        }
+  
+        &::-webkit-scrollbar {  
+          height: 4px;  
+        }
+
+        &::-webkit-scrollbar-thumb { 
+          background: $main-blue;  
+          border-radius: 10px; 
+        }
+        
+        &::-webkit-scrollbar-track { 
+          margin: 2rem;
+          background: $bg-grey;
+        }
+    }
+}

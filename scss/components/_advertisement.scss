@@ -1,0 +1,14 @@
+.advertisement{
+    padding: 20px 0 44px 0; 
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    &_footnote{
+        margin-top: 12px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}

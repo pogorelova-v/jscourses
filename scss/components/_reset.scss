@@ -151,3 +151,8 @@ button{
     font-family: inherit;
     cursor: pointer;
 }
+
+input,
+textarea{ 
+    all: unset;
+}

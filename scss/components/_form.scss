@@ -1,0 +1,177 @@
+form{ 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .form_title{
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    .group{
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .elem{ 
+        position: relative; 
+        
+        label{
+            position: absolute;
+            top: 17px;
+            left: 15px;
+            line-height: 15px;
+            color: $grey;
+            transition: 0.3s;
+
+            &.focus{
+                top: 3px;
+                font-size: 9px;
+                font-weight: 500;
+            }
+        }
+        
+        input,
+        textarea{
+            background-color: $white;
+            border: solid 1px $border-grey;
+            transition: 0.3s;
+            width: 100%; 
+            border-radius: 10px;
+            box-sizing: border-box;
+            padding: 16px 17px 17px 15px;
+
+            &:focus{
+                border: solid 1px $main-blue;
+            }
+            &:hover{
+                border: solid 1px $main-blue;
+            }
+        }
+
+        input{
+            height: 50px; 
+
+            &:-webkit-autofill {
+              transition: all 50000s ease-in-out;
+            }
+        }
+
+        textarea{
+            height: 200px;  
+        } 
+
+        &.select{
+            width: 100%;
+
+            .title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 50px; 
+                width: 100%;  
+                box-sizing: border-box;
+                padding: 16px 17px 17px 15px;
+                border: solid 1px $border-grey;
+                border-radius: 10px;
+                background-color: $white; 
+                transition: 0.3s;
+                color: $grey;
+                cursor: pointer;
+
+                svg{
+                    width: 11px;
+                    height: 6px;
+                    transform: rotate(180deg);
+                    transition: 0.3s;
+                }
+
+                span{
+                    pointer-events: none;
+                }
+
+                &:hover{
+                    border: solid 1px $main-blue;
+                }
+
+                &.open{
+                    svg{ 
+                        transform: rotate(0deg); 
+                    }
+                }
+
+                &.value{
+                    color: $font;
+                }
+            } 
+
+            .options{
+                display: none;
+                position: absolute;
+                z-index: $z-on-top;
+                top: 55px;
+                width: 100%;  
+                border: solid 1px $border-grey;
+                border-radius: 10px;
+                background-color: $white; 
+                overflow: hidden;
+
+                .radio_wrapper{
+                    position: relative; 
+                    display: flex;
+                    align-items: center;
+                    height: 45px;
+                    padding-left: 17px;
+                     
+                    .custom-radio{
+                        left: 0;
+                        top: 50%;
+                        width: 100%;
+                        transform: translateY(-50%);
+                        padding: 17px; 
+                        color: $font;
+
+                        input{
+                            // position: absolute;
+                            width: 0;
+                            padding: 0;
+                            border: none;
+                        } 
+
+                        &::after{
+                            position: absolute;
+                            content: '';
+                            top: 0;
+                            left: 0;
+                            width: 7px;
+                            height: 100%;
+                            transition: 0.3s;
+                        }
+
+                        &:hover{
+                            background-color: $bg-grey;
+                            cursor: pointer;
+                            
+                            &::after{
+                                background-color: $main-blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+
+    .btn{
+        margin-top: 10px;
+        
+        button{
+            width: 100%; 
+        }
+    }
+}
