@@ -171,5 +171,6 @@ $(document).ready(function () {
         $('[data-way-block] .way_picture').after( $('[data-way-block] .way_footnote') )
         $('[data-way-block] .way_footnote').wrap('<div class="container"></div>');
     }
+ 
 
 });

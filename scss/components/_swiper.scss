@@ -55,6 +55,10 @@
     @include desktop{
         .swiper-slide{
 
+            .slide-link{
+                display: block;
+            }
+
             .picture{ 
                 height: 228px; 
             } 

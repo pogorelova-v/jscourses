@@ -3,6 +3,10 @@ form{
     flex-direction: column;
     gap: 10px;
 
+    @include desktop{
+        gap: 12px;
+    }
+
     .form_title{
         font-size: 11px;
         font-weight: 600;
@@ -18,6 +22,10 @@ form{
         line-height: 16.8px;
         width: 197px;
         margin-bottom: 12px;
+
+        @include desktop{
+            width: 100%;
+        }
     }
 
     .group{
@@ -217,6 +225,7 @@ form{
         text-align: center;
 
         a{
+            display: block;
             color: $main-blue;
             transition: 0.3s;
 
